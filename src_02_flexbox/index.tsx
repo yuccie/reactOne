@@ -12,6 +12,16 @@ export default function MyIndex() {
         item: {
             fontSize: 24,
             padding: 10
+        },
+        row: {
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            justifyContent: 'space-around'
+        },
+        column: {
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center'
         }
     })
 
@@ -20,8 +30,17 @@ export default function MyIndex() {
             <View>
                 <Text>主轴方向</Text>
                 <View>
+                    <Text>flexDirection: 'row'（默认）</Text>
+                    <View style={[styles.container, styles.row]}>
+                        <Text style={[styles.item]}>刘备</Text>
+                        <Text style={[styles.item]}>关羽</Text>
+                        <Text style={[styles.item]}>曹操</Text>
+                    </View>
+                </View>
+
+                <View>
                     <Text>flexDirection: 'column'（默认）</Text>
-                    <View style={styles.container}>
+                    <View style={[styles.container, styles.column]}>
                         <Text style={[styles.item]}>刘备</Text>
                         <Text style={[styles.item]}>关羽</Text>
                         <Text style={[styles.item]}>曹操</Text>
