@@ -4,7 +4,8 @@ import {Text, StyleSheet} from 'react-native';
 // import Index02 from './src_02_flexbox/index';
 // import Index03 from './src_03_Dimensions/index';
 // import Index04 from './src_04_alert_button';
-import Index08 from './src_08_textInput';
+// import Index08 from './src_08_textInput';
+import Camera from './src_09_camera';
 
 const styles = StyleSheet.create({
   h2: {
@@ -23,7 +24,8 @@ export default function App() {
       <Index02 /> */}
       {/* <Index03 /> */}
       {/* <Index04 /> */}
-      <Index08 />
+      {/* <Index08 /> */}
+      <Camera />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, View, Dimensions, TextInput } from 'react-native';
+import { Text, StyleSheet, View, Dimensions, TextInput, SafeAreaView } from 'react-native';
 
 const styles = StyleSheet.create({
   input: {
@@ -24,26 +24,24 @@ export default function App() {
   }
 
   return (
-    <>
-      <View>
-        <TextInput
-          style={styles.input}
-          onChangeText={onChangeText}
-          value={text}
-        />
-        <TextInput
-          style={styles.input}
-          onChangeText={myChangeText}
-          value={text}
-        />
-        <TextInput
-          style={styles.input}
-          onChangeText={onChangeNumber}
-          value={number}
-          placeholder="useless placeholder"
-          keyboardType="numeric"
-        />
-      </View>
-    </>
+    <SafeAreaView>
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeText}
+        value={text}
+      />
+      <TextInput
+        style={styles.input}
+        onChangeText={myChangeText}
+        value={text}
+      />
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder="useless placeholder"
+        keyboardType="numeric"
+      />
+    </SafeAreaView>
   );
 }
